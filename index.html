@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast System</title>
+    <link href="output.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <style>
+        @media (max-width:1400px){
+            .weather-data .current-weather{
+                padding: 20px;
+            }
+            .weather-cards{
+                flex-wrap: wrap;
+            }
+            .weather-cards .card{
+                width: calc(100%/4 - 15px);
+            }
+        }
+        @media (max-width:950px){
+            .weather-input{
+                width: 450px;
+            }
+            .weather-cards .card{
+                width: calc(100%/2 - 10px);
+            }
+        }
+        @media (max-width:750px){
+            .container{
+                flex-wrap: wrap;
+                padding: 15px;
+            }
+            .weather-input{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-amber-100">
+    <h1 class="text-amber-100 py-5 px-0 text-center text-2xl bg-amber-950">Weather Dashboard</h1>
+    <div class="container flex gap-9 p-8">
+        <div class="weather-input w-full">
+            <h3 class="text-2xl">Enter a City Name</h3>
+            <input class="city-input w-full h-12 outline-none my-3 mb-5 text-lg rounded border-gray-300 border gap-2" type="text" placeholder="E.g.,Mumbai, London,Delhi">
+            <button class="search-btn w-full py-3 px-0 bg-amber-950 text-amber-100 text-base rounded cursor-pointer">Search</button>
+            <div class="separator flex items-center my-5">
+                <div class="w-full h-px bg-gray-300 -m-1"></div>
+                <span class="text-gray text-lg px-4 bg-beige">or</span>
+                <div class="w-full h-px bg-gray-300"></div>
+            </div>
+            <button class="location-btn w-full py-2 px-0 bg-gray-500 text-amber-100 text-base rounded cursor-pointer">Use Current Location</button>
+        </div>
+        <div class="weather-data w-full">
+            <div class="current-weather flex items-center justify-between bg-amber-950 rounded p-4  text-amber-100">
+                <div class="details">
+                    <h2 class="text-2xl">_____ ( ______ )</h2>
+                    <h4 class="text-base mt-3 font-medium">Temp: __0C</h4>
+                    <h4 class="text-base mt-3 font-medium">wind: __ M/S</h4>
+                    <h4 class="text-base mt-3 font-medium">Humidity: __%</h4>
+                </div>
+            </div>
+            <div class="days-forecast text-2xl my-5">
+                <h2 class="mb-3">5-Days Forecast</h2>
+                <ul class="weather-cards list-none flex gap-8">
+                    <li class="card bg-gray-500 rounded p-4 w-1/5 text-amber-100">
+                        <h3 class="text-lg">( ______ )</h3>
+                        <h4 class="text-base">Temp:__0C</h4>
+                        <h4 class="text-base">wind:__ M/S</h4>
+                        <h4 class="text-base">Humidity:__%</h4>
+                    </li>
+                    <li class="card bg-gray-500 rounded p-4 w-1/5 text-amber-100">
+                        <h3 class="text-lg">( ______ )</h3>
+                        <h4 class="text-base">Temp:__0C</h4>
+                        <h4 class="text-base">wind:__ M/S</h4>
+                        <h4 class="text-base">Humidity:__%</h4>
+                    </li>
+                    <li class="card bg-gray-500 rounded p-4 w-1/5 text-amber-100">
+                        <h3 class="text-lg">( ______ )</h3>
+                        <h4 class="text-base">Temp:__0C</h4>
+                        <h4 class="text-base">wind:__ M/S</h4>
+                        <h4 class="text-base">Humidity:__%</h4>
+                    </li>
+                    <li class="card bg-gray-500 rounded p-4 w-1/5 text-amber-100">
+                        <h3 class="text-lg">( ______ )</h3>
+                        <h4 class="text-base">Temp:__0C</h4>
+                        <h4 class="text-base">wind:__ M/S</h4>
+                        <h4 class="text-base">Humidity:__%</h4>
+                    </li>
+                    <li class="card bg-gray-500 rounded p-4 w-1/5 text-amber-100">
+                        <h3 class="text-lg">( ______ )</h3>
+                        <h4 class="text-base">Temp:__0C</h4>
+                        <h4 class="text-base">wind:__ M/S</h4>
+                        <h4 class="text-base">Humidity:__%</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
